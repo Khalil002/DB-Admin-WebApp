@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (input.id == "genero") {
         input.value = "Male";
       } else if (input.id == "tipoDocumento") {
-        input.value = "Tarjeta de identidad";
+        input.value = "Identity Card";
       } else if (input.id == "imgUser") {
         input.src = "../img/placefolder-photo.jpg";
       } else if (input.id == "datepicker") {

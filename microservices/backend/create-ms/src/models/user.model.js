@@ -6,7 +6,7 @@ const userSchema = new Schema({
     type: String, 
     required: [true, 'Tipo de documento es requerido'],
     enum: {
-      values: ['Tarjeta de identidad', 'Cedula'], 
+      values: ['Identity Card', 'Cedula'], 
       message: '{VALUE} no es un tipo de documento'
     }, 
   },
