@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modificar Personas</title>
+    <title>Modify Person Data</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -16,18 +16,18 @@
         </a>
       </div>
       <ul>
-        <li><a href="crear_persona.html">Crear Personas</a></li>
-        <li><a href="editar_persona.html">Modificar Datos Personales</a></li>
-        <li><a href="consultar_persona.html">Consultar Datos Personales</a></li>
-        <li><a href="borrar_persona.html">Borrar Personas</a></li>
-        <li><a href="log_persona.html">Consultar Log</a></li>
+        <li><a href="crear_persona.html">Create Person</a></li>
+        <li><a href="editar_persona.html">Modify Person Data</a></li>
+        <li><a href="consultar_persona.html">Consult Person Data</a></li>
+        <li><a href="borrar_persona.html">Delete Person</a></li>
+        <li><a href="log_persona.html">Consult Log</a></li>
       </ul>
     </div>
     <div class="container">
-      <h1>Modificar Datos Personales</h1>
+      <h1>Modify Person Data</h1>
       <form id="buscarPersonaForm">
         <div>
-          <label for="searchNumeroDocumento">Número de Documento:</label>
+          <label for="searchNumeroDocumento">Document number:</label>
           <input
             type="text"
             id="searchNumeroDocumento1"
@@ -35,49 +35,49 @@
             maxlength="10"
             minlength="1"
             pattern="^[0-9]{1,10}$"
-            placeholder="Número de Documento"
+            placeholder="Document number"
             required
           />
         </div>
-        <button type="button" id="buscarButton">Buscar</button>
+        <button type="button" id="buscarButton">Search</button>
       </form>
       <form id="actualizarPersonaForm">
         <div>
-          <label for="tipoDocumento">Tipo de Documento:</label>
+          <label for="tipoDocumento">Document type:</label>
           <select id="tipoDocumento1" name="tipoDocumento" >
             <option value=""></option>
-            <option value="Tarjeta de identidad">Tarjeta de Identidad</option>
-            <option value="Cedula">Cédula</option>
+            <option value="Tarjeta de identidad">Identity Card</option>
+            <option value="Cedula">Cedula</option>
           </select>
         </div>
         <div>
-          <label for="primerNombre">Primer Nombre:</label>
+          <label for="primerNombre">First name:</label>
           <input
             type="text"
             id="primerNombre1"
             name="primerNombre"
             pattern="^[A-Za-zñÑ][A-Za-zñÑ\s]{0,29}$"
-            title="Máx 30 caracteres"
+            title="Máx 30 characters"
             maxlength="30"
             minlength="1"
-            placeholder="Primer Nombre"
+            placeholder="First name"
           />
         </div>
         <div>
-          <label for="segundoNombre">Segundo Nombre:</label>
+          <label for="segundoNombre">Second name:</label>
           <input
             type="text"
             id="segundoNombre1"
             name="segundoNombre"
             pattern="^[A-Za-zñÑ][A-Za-zñÑ\s]{0,29}$"
-            title="Máx 30 caracteres"
+            title="Máx 30 characters"
             maxlength="30"
             minlength="1"
-            placeholder="Segundo Nombre (Opcional)"
+            placeholder="Second name (optional)"
           />
         </div>
         <div>
-          <label for="apellidos">Apellidos:</label>
+          <label for="apellidos">Last name:</label>
           <input
             type="text"
             id="apellidos1"
@@ -85,64 +85,64 @@
             maxlength="60"
             minlength="1"
             pattern="^[A-Za-zñÑ][A-Za-zñÑ\s]{0,59}$"
-            title="Máx 60 caracteres"
-            placeholder="Apellidos"
+            title="Máx 60 characters"
+            placeholder="Last name"
             
           />
         </div>
         <div>
-          <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+          <label for="fechaNacimiento">Birth date:</label>
           <input
           type="date"
           id="datepicker"
           name="fechaNacimiento"
-          placeholder="Selecciona o ingresa una fecha (dd-mm-yyyy)"
+          placeholder="Select or write a date (dd-mm-yyyy)"
           
         />
         </div>
         <div>
-          <label for="genero">Género:</label>
+          <label for="genero">Gender:</label>
           <select id="genero1" name="genero" >
             <option value=""></option>
-            <option value="Masculino">Masculino</option>
-            <option value="Femenino">Femenino</option>
-            <option value="No binario">No binario</option>
-            <option value="Prefiero no reportar">Prefiero no reportar</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Non binary">Non binary</option>
+            <option value="I prefer not to say">I prefer not to say</option>
           </select>
         </div>
         <div>
-          <label for="email">Correo Electrónico:</label>
+          <label for="email">Email:</label>
           <input
             type="email"
             id="email1"
             name="email1"
-            title="Complete con el formato de correo"
+            title="Complete the email with the proper format"
             pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-            placeholder="Correo Electrónico"
+            placeholder="example@gmail.com"
             
           />
         </div>
         <div>
-          <label for="celular">Celular:</label>
+          <label for="celular">Phone:</label>
           <input
             type="text"
             id="celular1"
             name="celular"
             minlength="10"
             pattern="^[0-9]{10}$"
-            title="Deben ser 10 números"
-            placeholder="Celular"
+            title="Must be 10 numbers"
+            placeholder="Phone"
             
           />
         </div>
         <div>
-          <label for="foto">Foto:</label>
+          <label for="foto">Photo:</label>
           <input type="file" id="foto1" name="foto" accept="image/*" />
         </div>
         <div class="botones_modificar">
           <div id="crear_limpiar">
-            <button type="submit">Actualizar</button>
-            <button type="submit" id="limpiar">Limpiar datos</button>
+            <button type="submit">Update</button>
+            <button type="submit" id="limpiar">Clear data</button>
           </div>
           <div>
             <img

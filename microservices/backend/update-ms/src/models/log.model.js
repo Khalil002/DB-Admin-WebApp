@@ -10,7 +10,7 @@ const logSchema = new mongoose.Schema({
     action: {
         type: String,
         required: true,
-        enum: ['crear usuario', 'leer usuario','actualizar usuario', 'eliminar usuario'],
+        enum: ['create user', 'read user','update user', 'delete user'],
     },
     createdAt: {
         type: Date,

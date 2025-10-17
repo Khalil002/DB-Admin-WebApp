@@ -52,7 +52,7 @@ const userSchema = new Schema({
     type: String,
     required: [true, 'Género es requerido'],
     enum: {
-      values: ['Masculino', 'Femenino', 'No binario', 'Prefiero no reportar'], 
+      values: ['Male', 'Female', 'Non binary', 'I prefer not to say'], 
       message: '{VALUE} no es una opción de género'
     },
   },

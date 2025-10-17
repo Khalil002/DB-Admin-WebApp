@@ -40,20 +40,20 @@ document.addEventListener("DOMContentLoaded", function () {
       body: JSON.stringify({ idNumber: idNumber })
       });
       if(response.ok) {
-        alert("Persona borrada con éxito!");
+        alert("Persona deleted successfully!");
         location.reload();
       } else if (response.status === 404) {
-        throw new Error("El número de documento no existe");
+        throw new Error("The document number does not exist");
       } else if (response.status === 503) {
-        throw new Error("delete-ms no está disponible");
+        throw new Error("delete-ms is not available");
       } else if (response.status === 504) {
-        throw new Error("la base de datos no está disponible");
+        throw new Error("The database is not available");
       } else {
         throw new Error("Unknown Error");
       }
     } catch (error) {
       if(error.message === "Failed to fetch") {
-        alert("Error: api-gateway no está disponible");
+        alert("Error: api-gateway is not available");
       }else{
         alert("Error: " + error.message);
       }

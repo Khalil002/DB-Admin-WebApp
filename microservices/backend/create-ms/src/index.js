@@ -76,7 +76,7 @@ async function createUser(req, res) {
       photo,
     });
     await newUser.save();
-    const action = 'crear usuario';
+    const action = 'create user';
     const newLog = new Log({ action, idNumber });
     await newLog.save();
     res.status(201).json(newUser);

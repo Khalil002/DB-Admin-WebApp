@@ -88,17 +88,17 @@ document.addEventListener("DOMContentLoaded", function () {
         populateFormData(data[0]); // Llenar los datos del formulario
         originalData = data[0];
       } else if (response.status === 404) {
-        throw new Error("El número de documento no existe");
+        throw new Error("The document number does not exist");
       } else if (response.status === 503) {
-        throw new Error("read-ms no está disponible");
+        throw new Error("read-ms is not available");
       } else if (response.status === 504) {
-        throw new Error("la base de datos no está disponible");
+        throw new Error("The database is not available");
       } else {
         throw new Error("Unknown Error");
       }
     } catch (error) {
       if (error.message === "Failed to fetch") {
-        alert("Error: api-gateway no está disponible");
+        alert("Error: api-gateway is not available");
       } else {
         alert("Error: " + error.message);
       }
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const file = fileInput.files[0];
 
     if (file && file.size > 2097152) {
-      alert("El tamaño de la foto debe ser menor de 2 MB.");
+      alert("Image size must be less than 2 MB.");
       return;
     } else if (file) {
       toBase64(file)
@@ -255,19 +255,19 @@ document.addEventListener("DOMContentLoaded", function () {
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        alert("Persona actualizada con éxito!");
+        alert("Person updated successfully!");
       } else if (response.status === 404) {
-        throw new Error("El número de documento no existe");
+        throw new Error("The document number does not exist");
       } else if (response.status === 503) {
-        throw new Error("update-ms no está disponible");
+        throw new Error("update-ms is not available");
       } else if (response.status === 504) {
-        throw new Error("la base de datos no está disponible");
+        throw new Error("The database is not available");
       } else {
         throw new Error("Unknown Error");
       }
     } catch (error) {
       if (error.message === "Failed to fetch") {
-        alert("Error: api-gateway no está disponible");
+        alert("Error: api-gateway is not available");
       } else {
         alert("Error: " + error.message);
       }

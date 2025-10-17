@@ -15,7 +15,7 @@ async function fetchLogData() {
   // Validate the idNumberInput against the pattern \d{1,10}
   const idNumberPattern = /^\d{0,10}$/;
   if (!idNumberPattern.test(idNumberInput.value)) {
-    alert("Número de Documento debe contener entre 1 y 10 dígitos.");
+    alert("Document number ,ust be between 1 and 10 numbers");
     return;
   }
 
@@ -37,15 +37,15 @@ async function fetchLogData() {
       const data = await response.json();
       if (data.length === 0) {
         logResults.innerHTML =
-          "<p>No se encontraron resultados con los filtros utilizados</p>";
+          "<p>No logs were found with the provided filters</p>";
       } else {
         logResults.innerHTML = `
           <table>
             <thead>
               <tr>
-                <th>Número de Documento</th>
-                <th>Acción</th>
-                <th>Fecha de Creación</th>
+                <th>Document number</th>
+                <th>Action</th>
+                <th>Date</th>
               </tr>
             </thead>
             <tbody>
@@ -65,17 +65,17 @@ async function fetchLogData() {
         `;
       }
     } else if (response.status === 404) {
-      throw new Error("El número de documento no existe");
+      throw new Error("The document number does not exist");
     } else if (response.status === 503) {
-      throw new Error("log-ms no está disponible");
+      throw new Error("log-ms is not available");
     } else if (response.status === 504) {
-      throw new Error("la base de datos no está disponible");
+      throw new Error("The database is not available");
     } else {
       throw new Error("Unknown Error");
     }
   } catch (error) {
     if (error.message === "Failed to fetch") {
-      alert("Error: api-gateway no está disponible");
+      alert("Error: api-gateway is not available");
     } else {
       alert("Error: " + error.message);
     }

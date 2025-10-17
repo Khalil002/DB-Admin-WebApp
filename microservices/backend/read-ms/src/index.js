@@ -58,7 +58,7 @@ async function getUser(req, res) {
       console.log('User not found');
     } else {
       console.log('User found');
-      const action = 'leer usuario';
+      const action = 'read user';
       const newLog = new Log({ action, idNumber });
       await newLog.save();
       res.status(200).json(user);

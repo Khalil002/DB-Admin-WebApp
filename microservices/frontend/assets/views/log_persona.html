@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consultar Log</title>
+    <title>Consult Log</title>
     <link rel="stylesheet" href="../style.css" />
     <link
       rel="stylesheet"
@@ -29,49 +29,49 @@
         </a>
       </div>
       <ul>
-        <li><a href="crear_persona.html">Crear Personas</a></li>
-        <li><a href="editar_persona.html">Modificar Datos Personales</a></li>
-        <li><a href="consultar_persona.html">Consultar Datos Personales</a></li>
-        <li><a href="borrar_persona.html">Borrar Personas</a></li>
-        <li><a href="log_persona.html">Consultar Log</a></li>
+        <li><a href="crear_persona.html">Create Person</a></li>
+        <li><a href="editar_persona.html">Modify Person Data</a></li>
+        <li><a href="consultar_persona.html">Consult Person Data</a></li>
+        <li><a href="borrar_persona.html">Delete Person</a></li>
+        <li><a href="log_persona.html">Consult Log</a></li>
       </ul>
     </div>
     <div class="container">
-      <h1>Consultar Log</h1>
+      <h1>Consult Log</h1>
       <form id="buscarLogForm">
         <div>
-          <label for="searchNumeroDocumento">Número de Documento:</label>
+          <label for="searchNumeroDocumento">Document number:</label>
           <input
             type="text"
             id="searchNumeroDocumento"
             name="searchNumeroDocumento"
             maxlength="10"
             pattern="^[0-9]{1,10}$"
-            placeholder="Número de Documento"
+            placeholder="Document number"
           />
         </div>
         <div>
-          <label for="searchFecha">Fecha:</label>
+          <label for="searchFecha">Date:</label>
           <input
             type="date"
             id="datepicker"
             name="searchFecha"
-            placeholder="Selecciona o ingresa una fecha (dd-mm-yyyy)"
+            placeholder="Select or write a date (dd-mm-yyyy)"
             required
           />
         </div>
         <div>
-          <label for="tipoAccion">Tipo de Acción:</label>
+          <label for="tipoAccion">Action type:</label>
           <select id="tipoAccion" name="tipoAccion" required>
-            <option value="">Sin seleccionar</option>
-            <option value="crear usuario">Crear usuario</option>
-            <option value="leer usuario">Leer usuario</option>
-            <option value="actualizar usuario">Actualizar usuario</option>
-            <option value="eliminar usuario">Eliminar usuario</option>
+            <option value="">None selected</option>
+            <option value="create user">Create user</option>
+            <option value="read user">Read user</option>
+            <option value="update user">Update user</option>
+            <option value="delete user">Delete user</option>
           </select>
         </div>
         <button id="buscar_log" type="button" onclick="fetchLogData()">
-          Buscar
+          Search
         </button>
       </form>
       <div id="logResults"></div>

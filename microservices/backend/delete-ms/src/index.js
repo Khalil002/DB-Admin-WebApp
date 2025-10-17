@@ -54,7 +54,7 @@ async function deleteUser(req, res) {
     } else {
       user.delete
       console.log('user deleted');
-      const action = 'eliminar usuario';
+      const action = 'delete user';
       const newLog = new Log({ action, idNumber });
       await newLog.save();
       res.status(200).json(user);

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consultar Persona</title>
+    <title>Delete Person</title>
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
@@ -14,18 +14,18 @@
         </a>
       </div>
       <ul>
-        <li><a href="crear_persona.html">Crear Personas</a></li>
-        <li><a href="editar_persona.html">Modificar Datos Personales</a></li>
-        <li><a href="consultar_persona.html">Consultar Datos Personales</a></li>
-        <li><a href="borrar_persona.html">Borrar Personas</a></li>
-        <li><a href="log_persona.html">Consultar Log</a></li>
+        <li><a href="crear_persona.html">Create Person</a></li>
+        <li><a href="editar_persona.html">Modify Person Data</a></li>
+        <li><a href="consultar_persona.html">Consult Person Data</a></li>
+        <li><a href="borrar_persona.html">Delete Person</a></li>
+        <li><a href="log_persona.html">Consult Log</a></li>
       </ul>
     </div>
     <div class="container">
-      <h1>Borrar Persona</h1>
+      <h1>Delete Person</h1>
       <form id="buscarPersonaForm">
         <div>
-          <label for="searchNumeroDocumento">Número de Documento:</label>
+          <label for="searchNumeroDocumento">Document number:</label>
           <input
             type="text"
             id="searchNumeroDocumento"
@@ -33,59 +33,59 @@
             maxlength="10"
             minlength="1"
             pattern="\d{1,10}"
-            placeholder="Número de Documento"
+            placeholder="Document number"
             required
           />
         </div>
-        <button type="button" onclick="fetchUserData()">Buscar</button>
+        <button type="button" onclick="fetchUserData()">Search</button>
       </form>
       <div id="userDetails">
         <div id="BorrarInfo">
           <div id="userDataDisplay">
-            <h2>Información del Usuario</h2>
+            <h2>User Information</h2>
             <p>
-              <strong>Primer Nombre:</strong>
+              <strong>First name:</strong>
               <span id="primerNombre" class="userDataPrimerNombre"></span>
             </p>
             <p>
-              <strong>Segundo Nombre:</strong>
+              <strong>Second name:</strong>
               <span id="segundoNombre" class="userDataSegundoNombre"></span>
             </p>
             <p>
-              <strong>Apellidos:</strong>
+              <strong>Last name:</strong>
               <span id="apellidos" class="userDataApellidos"></span>
             </p>
             <p>
-              <strong>Fecha de Nacimiento:</strong>
+              <strong>Birth date:</strong>
               <span id="fechaNacimiento" class="userDataFechaNacimiento"></span>
             </p>
             <p>
-              <strong>Género:</strong>
+              <strong>Gender:</strong>
               <span id="genero" class="userDataGenero"></span>
             </p>
             <p>
-              <strong>Correo Electrónico:</strong>
+              <strong>Email:</strong>
               <span id="email" class="userDataEmail"></span>
             </p>
             <p>
-              <strong>Celular:</strong>
+              <strong>Phone:</strong>
               <span id="celular" class="userDataCelular"></span>
             </p>
             <p>
-              <strong>Número de Documento:</strong>
+              <strong>Document number:</strong>
               <span id="numeroDocumento" class="userDataNumeroDocumento"></span>
             </p>
             <p>
-              <strong>Tipo de Documento:</strong>
+              <strong>Document type:</strong>
               <span id="tipoDocumento" class="userDataTipoDocumento"></span>
             </p>
           </div>
           <form id="borrarPersonaForm">
-            <button type="submit">Borrar</button>
+            <button type="submit">Delete</button>
           </form>
         </div>
         <div class="fotoUser">
-          <h2>Foto del usuario</h2>
+          <h2>Photo:</h2>
           <img id="foto" src="../img/placefolder-photo.jpg" alt="Foto de la Persona" />
         </div>
       </div>

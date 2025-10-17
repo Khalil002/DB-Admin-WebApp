@@ -72,7 +72,7 @@ async function updateUser(req, res) {
       console.log(idNumber);
     } else {
       console.log('User updated succesfully');
-      const action = 'actualizar usuario';
+      const action = 'update user';
       
       const newLog = new Log({ action, idNumber });
       await newLog.save();
