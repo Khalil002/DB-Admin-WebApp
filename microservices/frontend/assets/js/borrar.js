@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
       body: JSON.stringify({ idNumber: idNumber })
       });
       if(response.ok) {
-        alert("Persona deleted successfully!");
+        alert("Person deleted successfully!");
         location.reload();
       } else if (response.status === 404) {
         throw new Error("The document number does not exist");
