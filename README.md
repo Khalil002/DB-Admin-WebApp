@@ -5,6 +5,11 @@ A microservice architecture based web application for administrating a database.
 This project is a Full-Stack Web Application using the MERN (MongoDB, Express, React, NodeJS) stack. Each part of the application (the DB, the microservices, the API-Gateway and the front-end) are containerized using Docker. 
 Each section of the web app (Create Person, Modify Person data, Consult Person data, Delete Person, Consult Log) are divided into microservices (If for example, the container of the create Person service fails, all other services will keep on working).
 
+![](https://github.com/user-attachments/assets/9979a9a2-14fe-4c8b-8db9-a34919b9364b)
+
+
+
+
 
 # Usage
 By default the project runs in the localhost, but this can be configured by the user. 
