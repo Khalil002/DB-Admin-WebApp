@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Personas</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../img/logoprueba.png" alt="DataHub Logo" />
+        </a>
+      </div>
+      <ul>
+        <li><a href="crear_persona.html">Crear Personas</a></li>
+        <li><a href="editar_persona.html">Modificar Datos Personales</a></li>
+        <li><a href="consultar_persona.html">Consultar Datos Personales</a></li>
+        <li><a href="borrar_persona.html">Borrar Personas</a></li>
+        <li><a href="log_persona.html">Consultar Log</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <h1>Crear Persona</h1>
+      <form
+        id="crearPersonaForm"
+        action="http://localhost:8000/create/"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div>
+          <label for="tipoDocumento">Tipo de Documento:</label>
+          <select id="tipoDocumento" name="tipoDocumento" required>
+            <option value="Tarjeta de identidad">Tarjeta de Identidad</option>
+            <option value="Cedula">Cédula</option>
+          </select>
+        </div>
+        <div>
+          <label for="numeroDocumento">Número de Documento:</label>
+          <input
+            type="text"
+            id="numeroDocumento"
+            name="numeroDocumento"
+            maxlength="10"
+            minlength="1"
+            pattern="^[0-9]{1,10}$"
+            title="Max 10 números"
+            placeholder="Número de Documento"
+            required
+          />
+        </div>
+        <div>
+          <label for="primerNombre">Primer Nombre:</label>
+          <input
+            type="text"
+            id="primerNombre"
+            name="primerNombre"
+            pattern="^[A-Za-zñÑ][A-Za-zñÑ\s]{0,29}$"
+            title="Máx 30 caracteres"
+            maxlength="30"
+            minlength="1"
+            placeholder="Primer Nombre"
+            required
+          />
+        </div>
+        <div>
+          <label for="segundoNombre">Segundo Nombre:</label>
+          <input
+            type="text"
+            id="segundoNombre"
+            name="segundoNombre"
+            maxlength="30"
+            minlength="1"
+            pattern="^[A-Za-zñÑ][A-Za-zñÑ\s]{0,29}$"
+            title="Máx 30 caracteres"
+            placeholder="Segundo Nombre (opcional)"
+          />
+        </div>
+        <div>
+          <label for="apellidos">Apellidos:</label>
+          <input
+            type="text"
+            id="apellidos"
+            name="apellidos"
+            maxlength="60"
+            minlength="1"
+            pattern="^[A-Za-zñÑ][A-Za-zñÑ\s]{0,59}$"
+            title="Máx 60 caracteres"
+            placeholder="Apellidos"
+            required
+          />
+        </div>
+        <div>
+          <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+          <input
+            type="date"
+            id="datepicker"
+            name="fechaNacimiento"
+            placeholder="Selecciona o ingresa una fecha (dd-mm-yyyy)"
+            required
+          />
+        </div>
+        <div>
+          <label for="genero">Género:</label>
+          <select id="genero" name="genero" required>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="No binario">No binario</option>
+            <option value="Prefiero no reportar">Prefiero no reportar</option>
+          </select>
+        </div>
+        <div>
+          <label for="email">Correo Electrónico:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            title="Complete con el formato de correo"
+            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+            placeholder="Correo Electrónico"
+            required
+          />
+        </div>
+        <div>
+          <label for="celular">Celular:</label>
+          <input
+            type="text"
+            id="celular"
+            name="celular"
+            pattern="^[0-9]{10}$"
+            title="Deben ser 10 números"
+            placeholder="Celular"
+            required
+          />
+        </div>
+        <div>
+          <label for="foto">Foto:</label>
+          <input type="file" id="foto" name="foto" accept="image/*" required />
+        </div>
+        <div class="botones_modificar">
+          <div id="crear_limpiar">
+            <button type="submit">Crear</button>
+            <button type="submit" id="limpiar">Limpiar datos</button>
+          </div>
+          <div>
+            <img
+              id="imgUser"
+              src="../img/placefolder-photo.jpg"
+              alt="Foto de la Persona"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="../crear.js" defer></script>
+  </body>
+</html>
